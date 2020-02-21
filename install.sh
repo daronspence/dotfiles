@@ -15,13 +15,13 @@ brew tap homebrew/bundle
 brew bundle
 
 # Set default MySQL root password and auth type.
-mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password'; FLUSH PRIVILEGES;"
+# mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY ''; FLUSH PRIVILEGES;"
 
 # Install PHP extensions with PECL
 pecl install memcached imagick
 
 # Install global Composer packages
-/usr/local/bin/composer global require laravel/installer laravel/spark-installer laravel/valet
+/usr/local/bin/composer global require laravel/installer laravel/spark-installer laravel/valet tightenco/lambo
 
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install
@@ -36,6 +36,9 @@ ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
 # Symlink the Mackup config file to the home directory
 ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
+
+# Sylink the Lambo config to the home dir
+ln -s $HOME/.dotfiles/.lambo $HOME/.lambo
 
 # Set macOS preferences
 # We will run this last because this will reload the shell

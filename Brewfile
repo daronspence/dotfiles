@@ -6,7 +6,7 @@ tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 
 # Binaries
-brew 'awscli'
+# brew 'awscli'
 brew 'bash' # Latest Bash version
 brew 'bat' # "cat" on steroids
 brew 'coreutils' # Those that come with macOS are outdated
@@ -43,42 +43,67 @@ brew 'nginx'
 brew 'node'
 brew 'redis'
 brew 'yarn'
+brew 'php-code-sniffer'
+brew 'php-cs-fixer'
+brew 'wp-cli-completion'
 
 # Apps
 cask '1password'
+cask 'abstract'
 cask 'aerial'
+cask 'airflow'
 cask 'alfred'
 cask 'bartender'
+cask 'bettertouchtool'
 cask 'caffeine'
+cask 'cloudapp'
+cask 'disablemonitor'
 cask 'discord'
 cask 'docker'
 cask 'firefox'
+cask 'focusrite-saffire-mixcontrol'
 cask 'github'
-cask 'google-backup-and-sync'
+# cask 'google-backup-and-sync'
 cask 'google-chrome'
 cask 'gpg-suite'
+cask 'harvest'
+cask 'handbrake'
 cask 'imageoptim'
 cask 'insomnia'
+cask 'iterm2'
 cask 'java'
+cask 'karabiner-elements'
+cask 'lastpass'
+cask 'loopback'
 cask 'mysqlworkbench'
-cask 'phpstorm'
-cask 'screenflow'
+cask 'notion'
+cask 'postman'
+# cask 'phpstorm'
+cask 'reaper'
+cask 'rocket'
+# cask 'screenflow'
+cask 'securid'
 cask 'sip'
-cask 'skype'
+# cask 'sketch'
+# cask 'skype'
 cask 'slack'
 cask 'sublime-text'
 cask 'tableplus'
-cask 'telegram-desktop'
-cask 'there'
+# cask 'telegram-desktop'
+# cask 'there'
 cask 'the-unarchiver'
-cask 'tor-browser'
+# cask 'tor-browser'
 cask 'transmission'
 cask 'transmit'
+cask 'tunnelbear'
+cask 'tuple'
 cask 'vagrant'
+cask 'visual-studio-code'
 cask 'virtualbox' # Might need to allow access in Security settings
 cask 'virtualbox-extension-pack'
 cask 'vlc'
-cask 'whatsapp'
+cask 'zoomus'
+# cask 'whatsapp'
 
 # Quicklook
 cask 'qlcolorcode'
@@ -98,10 +123,12 @@ cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
 
 # Mac App Store
-mas 'Byword', id: 420212497
-mas 'Giphy Capture', id: 668208984
-mas 'Keynote', id: 409183694
+# mas 'Byword', id: 420212497
+# mas 'Giphy Capture', id: 668208984
+# mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
-mas 'Spark', id: 1176895641
-mas 'Things', id: 904280696
-mas 'Tweetbot', id: 1384080005
+mas 'Mainstage 3', id: 634159523
+mas 'Pages', id: 409201541
+# mas 'Spark', id: 1176895641
+# mas 'Things', id: 904280696
+# mas 'Tweetbot', id: 1384080005
