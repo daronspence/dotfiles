@@ -4,6 +4,7 @@ tap 'homebrew/cask-eid'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
+tap 'homebrew/cask-drivers'
 
 # Binaries
 # brew 'awscli'
@@ -11,7 +12,7 @@ brew 'bash' # Latest Bash version
 brew 'bat' # "cat" on steroids
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'ffmpeg'
-brew 'gh'
+# brew 'gh'
 brew 'git'
 brew 'gnupg2'
 brew 'grep'
@@ -80,9 +81,11 @@ cask 'notion'
 cask 'postman'
 # cask 'phpstorm'
 cask 'reaper'
+cask 'rectangle'
 cask 'rocket'
 # cask 'screenflow'
 cask 'securid'
+cask 'sequel-pro'
 cask 'sip'
 # cask 'sketch'
 # cask 'skype'
