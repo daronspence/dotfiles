@@ -12,6 +12,7 @@ brew 'bash' # Latest Bash version
 brew 'bat' # "cat" on steroids
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'ffmpeg'
+brew 'fswatch'
 # brew 'gh'
 brew 'git'
 brew 'gnupg2'
@@ -46,6 +47,7 @@ brew 'redis'
 brew 'yarn'
 brew 'php-code-sniffer'
 brew 'php-cs-fixer'
+brew 'wp-cli'
 brew 'wp-cli-completion'
 
 # Apps

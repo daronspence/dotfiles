@@ -21,7 +21,7 @@ brew bundle
 pecl install memcached imagick
 
 # Install global Composer packages
-/usr/local/bin/composer global require laravel/installer laravel/spark-installer laravel/valet tightenco/lambo
+/usr/local/bin/composer global require laravel/installer laravel/spark-installer laravel/valet tightenco/lambo squizlabs/php_codesniffer
 
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install
