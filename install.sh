@@ -21,10 +21,13 @@ brew bundle
 pecl install memcached imagick
 
 # Install global Composer packages
-/usr/local/bin/composer global require laravel/installer laravel/spark-installer laravel/valet tightenco/lambo squizlabs/php_codesniffer
+/usr/local/bin/composer global require laravel/installer laravel/spark-installer laravel/valet tightenco/lambo squizlabs/php_codesniffer wp-coding-standards/wpcs
 
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install
+
+# link phpcs
+$HOME/.composer/vendor/squizlabs/php_codesniffer/bin/phpcs --config-set installed_paths ~/.composer/vendor/wp-coding-standards/wpcs/
 
 # Create a Sites directory
 # This is a default directory for macOS user accounts but doesn't comes pre-installed
@@ -39,6 +42,9 @@ ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 
 # Sylink the Lambo config to the home dir
 ln -s $HOME/.dotfiles/.lambo $HOME/.lambo
+
+# Install NVM
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
