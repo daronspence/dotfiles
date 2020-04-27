@@ -21,6 +21,7 @@ brew 'httpie'
 brew 'hub'
 brew 'mackup'
 brew 'mas' # Mac App Store manager
+brew 'mkcert'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'stripe/stripe-cli/stripe'
 brew 'trash' # Manage the Trash bin
@@ -81,6 +82,7 @@ cask 'lastpass'
 cask 'loopback'
 cask 'mysqlworkbench'
 cask 'notion'
+cask 'obs'
 cask 'postman'
 # cask 'phpstorm'
 cask 'reaper'

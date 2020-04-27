@@ -9,6 +9,8 @@ alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
 alias zbundle="antibody bundle < $DOTFILES/zsh_plugins.txt > $DOTFILES/zsh_plugins.sh"
 alias serve=valet share
+alias vstart="valet start && brew services start mysql"
+alias vstop="valet stop && brew services stop mysql"
 
 # Directories
 alias dotfiles="cd $DOTFILES"
