@@ -11,6 +11,7 @@ tap 'homebrew/cask-drivers'
 brew 'bash' # Latest Bash version
 brew 'bat' # "cat" on steroids
 brew 'coreutils' # Those that come with macOS are outdated
+brew 'ctop'
 brew 'ffmpeg'
 brew 'fswatch'
 # brew 'gh'
