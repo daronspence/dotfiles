@@ -62,6 +62,10 @@ alias nuke="git clean -df && git reset --hard"
 alias unstage="git restore --staged ."
 
 # Work stuff
-alias cmstart="docker-compose -f ~/Sites/cmdev/web/docker-compose.yml up -d && docker-compose -f ~/Sites/cmdev/partner-dashboard/docker-compose.yml up -d && docker-compose -f ~/Sites/cmdev/elastic-legacy/docker-compose.yml up -d"
-alias cmstop="docker-compose -f ~/Sites/cmdev/web/docker-compose.yml down && docker-compose -f ~/Sites/cmdev/partner-dashboard/docker-compose.yml down && docker-compose -f ~/Sites/cmdev/elastic-legacy/docker-compose.yml down"
+alias cmstart="docker-compose -f ~/Sites/cmdev/web/docker-compose.yml up -d && docker-compose -f ~/Sites/cmdev/partner-dashboard/docker-compose.yml up -d && docker-compose -f ~/Sites/cmdev/elastic-legacy/docker-compose.yml up -d && docker-compose -f ~/Sites/cmdev/orders/docker-compose.yml up -d"
+alias cmstop="docker-compose -f ~/Sites/cmdev/web/docker-compose.yml down && docker-compose -f ~/Sites/cmdev/partner-dashboard/docker-compose.yml down && docker-compose -f ~/Sites/cmdev/elastic-legacy/docker-compose.yml down && docker-compose -f ~/Sites/cmdev/orders/docker-compose.yml down"
 alias cmrestart="cmstop && cmstart"
+
+alias m7start="docker-compose -f ~/Sites/m7/docker-compose.yml up -d"
+alias m7stop="docker-compose -f  ~/Sites/m7/docker-compose.yml down"
+alias m7restart="m7stop && m7start"

@@ -26,7 +26,7 @@ php artisan horizon:install
 
 php artisan telescope:install
 
-php artisan preset tailwindcss-auth
+php artisan ui tailwindcss --auth
 
 php artisan migrate
 
