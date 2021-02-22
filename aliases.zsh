@@ -7,15 +7,18 @@ weather() { curl -4 wttr.in/${1:-antwerp} }
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
+alias composer="php -d memory_limit=-1 `which composer`"
 alias zbundle="antibody bundle < $DOTFILES/zsh_plugins.txt > $DOTFILES/zsh_plugins.sh"
 alias serve=valet share
 alias vstart="valet start && brew services start mysql"
 alias vstop="valet stop && brew services stop mysql"
+alias chrome="open -n -a /Applications/Google\ Chrome.app --args --user-data-dir='/tmp/chrome_dev_session' --disable-web-security"
 
 # Directories
 alias dotfiles="cd $DOTFILES"
 alias library="cd $HOME/Library"
 alias sites="cd $HOME/Sites"
+alias cake="cd $HOME/Sites/eat-cake"
 alias lara="sites && cd laravel/"
 
 # Laravel
@@ -65,7 +68,14 @@ alias unstage="git restore --staged ."
 alias cmstart="docker-compose -f ~/Sites/cmdev/web/docker-compose.yml up -d && docker-compose -f ~/Sites/cmdev/partner-dashboard/docker-compose.yml up -d && docker-compose -f ~/Sites/cmdev/elastic-legacy/docker-compose.yml up -d && docker-compose -f ~/Sites/cmdev/orders/docker-compose.yml up -d"
 alias cmstop="docker-compose -f ~/Sites/cmdev/web/docker-compose.yml down && docker-compose -f ~/Sites/cmdev/partner-dashboard/docker-compose.yml down && docker-compose -f ~/Sites/cmdev/elastic-legacy/docker-compose.yml down && docker-compose -f ~/Sites/cmdev/orders/docker-compose.yml down"
 alias cmrestart="cmstop && cmstart"
+alias cmrphp="docker-compose -f ~/Sites/cmdev/web/docker-compose.yml down && cmstart"
 
 alias m7start="docker-compose -f ~/Sites/m7/docker-compose.yml up -d"
 alias m7stop="docker-compose -f  ~/Sites/m7/docker-compose.yml down"
 alias m7restart="m7stop && m7start"
+
+alias cmdisablexdebug="docker exec -it cm-web-php /bin/bash -c 'mv /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini.disabled && ls -l /usr/local/etc/php/conf.d' && sleep 1 && cmrphp"
+alias cmenablexdebug="docker exec -it cm-web-php /bin/bash -c 'mv /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini.disabled /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini' && sleep 1 && cmrphp"
+alias cmphpinilist="docker exec -it cm-web-php /bin/bash -c 'ls -l /usr/local/etc/php/conf.d'"
+
+alias cmpd="docker exec -it cm-partner-dashboard-php"

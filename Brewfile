@@ -18,6 +18,7 @@ brew 'fswatch'
 brew 'git'
 brew 'gnupg2'
 brew 'grep'
+brew 'htop'
 brew 'httpie'
 brew 'hub'
 brew 'mackup'
@@ -45,6 +46,7 @@ brew 'imagemagick'
 brew 'mysql'
 brew 'nginx'
 brew 'node'
+brew 'pv'
 brew 'redis'
 brew 'yarn'
 brew 'php-code-sniffer'
@@ -133,8 +135,8 @@ cask 'font-source-serif-pro'
 # Mac App Store
 # mas 'Byword', id: 420212497
 # mas 'Giphy Capture', id: 668208984
-mas 'Harvest', id: 506189836
-mas 'Jira', id: 1475897096
+# mas 'Harvest', id: 506189836
+# mas 'Jira', id: 1475897096
 # mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'Mainstage 3', id: 634159523
