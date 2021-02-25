@@ -4,7 +4,7 @@ echo "Setting up your Mac..."
 
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
 # Update Homebrew recipes
@@ -21,7 +21,7 @@ brew bundle
 pecl install memcached imagick
 
 # Install global Composer packages
-/usr/local/bin/composer global require laravel/installer laravel/spark-installer laravel/valet tightenco/lambo squizlabs/php_codesniffer wp-coding-standards/wpcs
+/usr/local/bin/composer global require laravel/installer laravel/valet tightenco/lambo squizlabs/php_codesniffer wp-coding-standards/wpcs beyondcode/expose
 
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install

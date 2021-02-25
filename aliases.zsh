@@ -7,7 +7,7 @@ weather() { curl -4 wttr.in/${1:-dallas} }
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
-alias composer="php -d memory_limit=-1 `which composer`"
+alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
 alias zbundle="antibody bundle < $DOTFILES/zsh_plugins.txt > $DOTFILES/zsh_plugins.sh"
 alias serve=valet share
 alias vstart="valet start && brew services start mysql"
