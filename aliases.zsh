@@ -14,6 +14,10 @@ alias vstart="valet start && brew services start mysql"
 alias vstop="valet stop && brew services stop mysql"
 alias chrome="open -n -a /Applications/Google\ Chrome.app --args --user-data-dir='/tmp/chrome_dev_session' --disable-web-security"
 
+alias php='nocorrect php'
+alias npm='nocorrect npm'
+alias yarn='nocorrect yarn'
+
 # Directories
 alias dotfiles="cd $DOTFILES"
 alias library="cd $HOME/Library"
@@ -22,7 +26,7 @@ alias cake="cd $HOME/Sites/eat-cake"
 alias lara="sites && cd laravel/"
 
 # Laravel
-alias a="php artisan"
+alias a="nocorrect php artisan"
 alias ams="php artisan migrate:fresh --seed"
 
 # PHP
