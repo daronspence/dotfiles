@@ -41,7 +41,7 @@ ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 
 # Sylink the Lambo config to the home dir
-ln -s $HOME/.dotfiles/.lambo $HOME/.lambo
+ln -s $HOME/.dotfiles/.lambo $HOME/
 
 # Install NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
