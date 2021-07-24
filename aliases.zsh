@@ -83,3 +83,5 @@ alias cmenablexdebug="docker exec -it cm-web-php /bin/bash -c 'mv /usr/local/etc
 alias cmphpinilist="docker exec -it cm-web-php /bin/bash -c 'ls -l /usr/local/etc/php/conf.d'"
 
 alias cmpd="docker exec -it cm-partner-dashboard-php"
+
+alias restartvalet-"rm ~/.config/valet/valet.sock && valet restart"

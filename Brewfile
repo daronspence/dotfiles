@@ -4,6 +4,7 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'homebrew/cask-drivers'
+tap 'nicoverbruggen/homebrew-cask'
 
 # Binaries
 # brew 'awscli'
@@ -61,7 +62,7 @@ cask '1password'
 cask 'aerial'
 cask 'airflow'
 cask 'alfred'
-cask 'bettertouchtool'
+# cask 'bettertouchtool'
 cask 'camo-studio'
 cask 'cleanshot'
 # cask 'cloudapp'
@@ -75,7 +76,7 @@ cask 'focusrite-saffire-mixcontrol'
 cask 'github'
 # cask 'google-backup-and-sync'
 cask 'google-chrome'
-cask 'gpg-suite'
+# cask 'gpg-suite'
 cask 'handbrake'
 cask 'hey'
 cask 'imageoptim'
@@ -87,6 +88,7 @@ cask 'mysqlworkbench'
 cask 'native-access'
 cask 'notion'
 cask 'obs'
+cask 'phpmon'
 cask 'postman'
 cask 'ray'
 cask 'reaper'
@@ -134,7 +136,7 @@ cask 'font-source-serif-pro'
 # Mac App Store
 # mas 'Byword', id: 420212497
 # mas 'Giphy Capture', id: 668208984
-# mas 'Harvest', id: 506189836
+mas 'Harvest', id: 506189836
 # mas 'Jira', id: 1475897096
 # mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825

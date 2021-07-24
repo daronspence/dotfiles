@@ -135,3 +135,6 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
+fpath=(~/.stripe $fpath)
+autoload -Uz compinit && compinit -i
