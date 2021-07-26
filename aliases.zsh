@@ -24,6 +24,7 @@ alias library="cd $HOME/Library"
 alias sites="cd $HOME/Sites"
 alias cake="cd $HOME/Sites/eat-cake"
 alias lara="sites && cd laravel/"
+alias braodway="cd $HOME/broadway"
 
 # Laravel
 alias a="nocorrect php artisan"
