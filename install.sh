@@ -21,7 +21,7 @@ brew bundle
 pecl install memcached imagick
 
 # Install global Composer packages
-/usr/local/bin/composer global require laravel/installer laravel/valet tightenco/lambo squizlabs/php_codesniffer wp-coding-standards/wpcs beyondcode/expose statamic/cli
+/usr/local/bin/composer global require laravel/installer laravel/valet tightenco/lambo squizlabs/php_codesniffer wp-coding-standards/wpcs beyondcode/expose statamic/cli laravel/forge-cli
 
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install
