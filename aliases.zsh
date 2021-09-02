@@ -68,6 +68,7 @@ alias resolve="git add . && git commit --no-edit"
 alias gl="git log --oneline --decorate --color"
 alias nuke="git clean -df && git reset --hard"
 alias unstage="git restore --staged ."
+alias pushup="git push -u origin HEAD"
 
 # Work stuff
 alias cmstart="docker-compose -f ~/Sites/cmdev/web/docker-compose.yml up -d && docker-compose -f ~/Sites/cmdev/partner-dashboard/docker-compose.yml up -d && docker-compose -f ~/Sites/cmdev/elastic-legacy/docker-compose.yml up -d && docker-compose -f ~/Sites/cmdev/orders/docker-compose.yml up -d"
