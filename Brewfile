@@ -38,6 +38,7 @@ brew 'svgo'
 brew 'gifsicle'
 
 # Development
+brew 'elixir'
 brew 'php'
 brew 'php@7.4'
 brew 'phive'
