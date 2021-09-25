@@ -4,13 +4,22 @@ PROJECTPATH="."
 MESSAGE="Initial commit."
 QUIET=false
 DEVELOP=false
-AUTH=false
-NODE=false
 CODEEDITOR="code"
 BROWSER=""
 LINK=false
 SECURE=false
-FRONTEND="vue"
 CREATE_DATABASE=true
 DB_USERNAME="root"
-DB_PASSWORD="password"
+# DB_PASSWORD="password"
+
+MIGRATE_DATABASE=yes
+
+# The database host. Defaults to 127.0.0.1.
+DB_HOST=127.0.0.1
+
+# The database port. Defaults to 3306.
+#DB_PORT=
+
+# The database name. Defaults to the project name.
+#DB_NAME=
+
