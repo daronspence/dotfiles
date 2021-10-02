@@ -19,14 +19,13 @@
 # git add .
 # git commit -am "Initialize Composer dependencies and additional files."
 
-composer require laravel-frontend-presets/tailwindcss barryvdh/laravel-debugbar laravel/telescope --dev
+composer require barryvdh/laravel-debugbar laravel/telescope laravel/breeze --dev
 composer require laravel/horizon
 
+php artisan breeze:install
 php artisan horizon:install
 
 php artisan telescope:install
-
-php artisan ui tailwindcss --auth
 
 php artisan migrate
 
