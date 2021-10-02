@@ -91,6 +91,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+export ERL_AFLAGS="-kernel shell_history enabled"
 
 # You may need to manually set your language environment
 export LC_ALL=en_US.UTF-8
