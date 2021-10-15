@@ -139,3 +139,5 @@ load-nvmrc
 
 fpath=(~/.stripe $fpath)
 autoload -Uz compinit && compinit -i
+
+source $HOME/broadway/apm/apm_completion;
