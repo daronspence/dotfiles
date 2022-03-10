@@ -9,7 +9,7 @@ export PATH="node_modules/.bin:vendor/bin:$PATH"
 
 export PATH="/usr/local/sbin:$PATH"
 
-export PATH="$HOME/broadway/bin:$PATH"
+[ -d "$HOME/broadway" ] && export PATH="$HOME/broadway/bin:$PATH"
 
 # Make sure coreutils are loaded before system commands
 # I've disabled this for now because I only use "ls" which is
@@ -19,4 +19,4 @@ export PATH="$HOME/broadway/bin:$PATH"
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-export COMPOSER_MEMORY_LIMIT=-1 
+export COMPOSER_MEMORY_LIMIT=-1
