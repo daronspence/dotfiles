@@ -84,7 +84,7 @@ ZSH_CUSTOM=$DOTFILES
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vscode)
+plugins=(git vscode git-trim)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -140,4 +140,4 @@ load-nvmrc
 fpath=(~/.stripe $fpath)
 autoload -Uz compinit && compinit -i
 
-source $HOME/broadway/apm/apm_completion;
+[ -d "$HOME/broadway" ] && source $HOME/broadway/apm/apm_completion;
