@@ -29,6 +29,7 @@ alias braodway="cd $HOME/broadway"
 # Laravel
 alias a="nocorrect php artisan"
 alias va="nocorrect valet php artisan"
+alias vc="nocorrect valet composer"
 alias ams="php artisan migrate:fresh --seed"
 
 # PHP

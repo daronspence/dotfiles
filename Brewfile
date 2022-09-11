@@ -25,7 +25,7 @@ brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'mkcert'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
-brew 'stripe/stripe-cli/stripe'
+# brew 'stripe/stripe-cli/stripe'
 brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure
 brew 'zlib' # Needed for Memcached
@@ -77,22 +77,21 @@ cask 'github'
 cask 'google-chrome'
 # cask 'gpg-suite'
 cask 'handbrake'
+cask 'hiddenbar'
 cask 'hey'
 cask 'iina'
 cask 'imageoptim'
 cask 'insomnia'
 cask 'iterm2'
 cask 'karabiner-elements'
-cask 'keepingyouawake'
 cask 'loopback'
-cask 'mysqlworkbench'
 cask 'native-access'
 cask 'notion'
 cask 'obs'
 cask 'phpmon'
 cask 'postman'
 cask 'ray'
-cask 'reaper'
+# cask 'reaper'
 cask 'rectangle'
 cask 'rocket'
 cask 'shureplus-motiv'
@@ -114,12 +113,8 @@ cask 'visual-studio-code'
 # cask 'virtualbox' # Might need to allow access in Security settings
 # cask 'virtualbox-extension-pack'
 cask 'vlc'
+cask 'wkhtmltopdf'
 cask 'zoom'
-
-# Quicklook
-cask 'qlmarkdown'
-cask 'quicklook-json'
-cask 'quicklook-csv'
 
 # Fonts
 cask 'font-inter'
@@ -133,15 +128,13 @@ cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
 
 # Mac App Store
-# mas 'Byword', id: 420212497
-# mas 'Giphy Capture', id: 668208984
-mas 'Harvest', id: 506189836
+mas 'Battery Indicator', id: 1206020918
+mas 'Dato', id: 1470584107
 # mas 'Jira', id: 1475897096
-# mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'Mainstage 3', id: 634159523
 mas 'Pages', id: 409201541
 mas 'GarageBand', id: 682658836
-# mas 'Spark', id: 1176895641
-# mas 'Things', id: 904280696
-# mas 'Tweetbot', id: 1384080005
+mas 'Lungo', id: 1263070803
+mas 'Speediness', id: 1596706466
+
