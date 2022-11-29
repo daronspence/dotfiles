@@ -3,11 +3,11 @@ alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 alias reloadshell="source $HOME/.zshrc"
 alias reloaddns="sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder && say 'DNS cache flushed'"
 alias ll="/usr/local/opt/coreutils/libexec/gnubin/ls -ahlF --color --group-directories-first"
-weather() { curl -4 wttr.in/${1:-dallas} }
+weather() { curl -4 wttr.in/${1:-eindhoven} }
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
-alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
+# alias composer="php -d memory_limit=-1 /path/to/composer" # add to machine-aliases.zsh
 alias zbundle="antibody bundle < $DOTFILES/zsh_plugins.txt > $DOTFILES/zsh_plugins.sh"
 alias serve=valet share
 alias vstart="valet start && brew services start mysql"
