@@ -73,15 +73,6 @@ alias unstage="git restore --staged ."
 alias pushup="git push -u origin HEAD"
 
 # Work stuff
-alias cmstart="docker-compose -f ~/Sites/cmdev/web/docker-compose.yml up -d && docker-compose -f ~/Sites/cmdev/partner-dashboard/docker-compose.yml up -d && docker-compose -f ~/Sites/cmdev/elastic-legacy/docker-compose.yml up -d && docker-compose -f ~/Sites/cmdev/orders/docker-compose.yml up -d"
-alias cmstop="docker-compose -f ~/Sites/cmdev/web/docker-compose.yml down && docker-compose -f ~/Sites/cmdev/partner-dashboard/docker-compose.yml down && docker-compose -f ~/Sites/cmdev/elastic-legacy/docker-compose.yml down && docker-compose -f ~/Sites/cmdev/orders/docker-compose.yml down"
-alias cmrestart="cmstop && cmstart"
-alias cmrphp="docker-compose -f ~/Sites/cmdev/web/docker-compose.yml down && cmstart"
-
-alias m7start="docker-compose -f ~/Sites/m7/docker-compose.yml up -d"
-alias m7stop="docker-compose -f  ~/Sites/m7/docker-compose.yml down"
-alias m7restart="m7stop && m7start"
-
 alias cmdisablexdebug="docker exec -it cm-web-php /bin/bash -c 'mv /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini.disabled && ls -l /usr/local/etc/php/conf.d' && sleep 1 && cmrphp"
 alias cmenablexdebug="docker exec -it cm-web-php /bin/bash -c 'mv /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini.disabled /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini' && sleep 1 && cmrphp"
 alias cmphpinilist="docker exec -it cm-web-php /bin/bash -c 'ls -l /usr/local/etc/php/conf.d'"
@@ -90,3 +81,16 @@ alias cmpd="docker exec -it cm-partner-dashboard-php"
 
 alias restartvalet-"rm ~/.config/valet/valet.sock && valet restart"
 alias coverage="export XDEBUG_MODE=coverage && vendor/bin/phpunit --coverage-html reports/"
+
+function tab () {
+    FOUND=$(which ttab)
+    args="$@"
+    if [[ ${FOUND} != *"not found"* ]];then
+        ttab $args
+        return
+    fi
+
+    echo "New tab package not found. Installing from npm."
+    npm install ttab -g
+    echo "Package installed.\nPlease restart your terminal and re-run the command."
+}
