@@ -1,9 +1,7 @@
 # Taps
-tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
-tap 'homebrew/cask-drivers'
 tap 'nicoverbruggen/homebrew-cask'
 
 # Binaries
@@ -86,6 +84,7 @@ cask 'imageoptim'
 cask 'insomnia'
 cask 'iterm2'
 cask 'karabiner-elements'
+cask 'kitty'
 cask 'loopback'
 cask 'native-access'
 cask 'notion'
