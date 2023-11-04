@@ -10,9 +10,6 @@ alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
 # alias composer="php -d memory_limit=-1 /path/to/composer" # add to machine-aliases.zsh
 alias zbundle="antibody bundle < $DOTFILES/zsh_plugins.txt > $DOTFILES/zsh_plugins.sh"
-alias serve=valet share
-alias vstart="valet start && brew services start mysql"
-alias vstop="valet stop && brew services stop mysql"
 alias chrome="open -n -a /Applications/Google\ Chrome.app --args --user-data-dir='/tmp/chrome_dev_session' --disable-web-security"
 
 alias dlbook="audiobook-dl --username=st202311@daronspence.com --password=$(op read 'op://Shared/Storytel 2023-11/password')"
@@ -37,7 +34,6 @@ alias cfresh="rm -rf vendor/ composer.lock && composer i"
 # JS
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
 alias watch="npm run watch"
-
 
 # Docker
 alias docker-composer="docker-compose"
@@ -69,7 +65,6 @@ alias cmphpinilist="docker exec -it cm-web-php /bin/bash -c 'ls -l /usr/local/et
 
 alias cmpd="docker exec -it cm-partner-dashboard-php"
 
-alias restartvalet-"rm ~/.config/valet/valet.sock && valet restart"
 alias coverage="export XDEBUG_MODE=coverage && vendor/bin/phpunit --coverage-html reports/"
 
 function tab () {
