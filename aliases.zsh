@@ -15,7 +15,7 @@ alias vstart="valet start && brew services start mysql"
 alias vstop="valet stop && brew services stop mysql"
 alias chrome="open -n -a /Applications/Google\ Chrome.app --args --user-data-dir='/tmp/chrome_dev_session' --disable-web-security"
 
-dlbook="audiobook-dl --username=st202311@daronspence.com --password=$(op read 'op://Shared/Storytel 2023-11/password')"
+alias dlbook="audiobook-dl --username=st202311@daronspence.com --password=$(op read 'op://Shared/Storytel 2023-11/password')"
 
 # alias php='nocorrect php'
 alias npm='nocorrect npm'
@@ -26,31 +26,18 @@ alias dotfiles="cd $DOTFILES"
 alias library="cd $HOME/Library"
 alias sites="cd $HOME/Sites"
 alias cake="cd $HOME/Sites/eat-cake"
-alias lara="sites && cd laravel/"
-alias braodway="cd $HOME/broadway"
 
 # Laravel
 alias a="nocorrect php artisan"
-alias va="nocorrect valet php artisan"
-alias vc="nocorrect valet composer"
 alias ams="php artisan migrate:fresh --seed"
 
 # PHP
-alias php73="/usr/local/Cellar/php@7.3/7.3.13/bin/php"
-alias php72="/usr/local/Cellar/php@7.2/7.2.26/bin/php"
 alias cfresh="rm -rf vendor/ composer.lock && composer i"
 
 # JS
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
 alias watch="npm run watch"
 
-# Vagrant
-alias v="vagrant global-status"
-alias vup="vagrant up"
-alias vhalt="vagrant halt"
-alias vssh="vagrant ssh"
-alias vreload="vagrant reload"
-alias vrebuild="vagrant destroy --force && vagrant up"
 
 # Docker
 alias docker-composer="docker-compose"
