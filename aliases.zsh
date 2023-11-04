@@ -7,7 +7,6 @@ weather() { curl -4 wttr.in/${1:-eindhoven} }
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
-# alias composer="php -d memory_limit=-1 /path/to/composer" # add to machine-aliases.zsh
 alias zbundle="antibody bundle < $DOTFILES/zsh_plugins.txt > $DOTFILES/zsh_plugins.sh"
 alias chrome="open -n -a /Applications/Google\ Chrome.app --args --user-data-dir='/tmp/chrome_dev_session' --disable-web-security"
 
