@@ -3,7 +3,6 @@ alias vim=nvim
 alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 alias reloadshell="source $HOME/.zshrc"
 alias reloaddns="sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder && say 'DNS cache flushed'"
-alias ll="/usr/local/opt/coreutils/libexec/gnubin/ls -ahlF --color --group-directories-first"
 weather() { curl -4 wttr.in/${1:-eindhoven} }
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
