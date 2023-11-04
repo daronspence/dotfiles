@@ -15,7 +15,9 @@ alias vstart="valet start && brew services start mysql"
 alias vstop="valet stop && brew services stop mysql"
 alias chrome="open -n -a /Applications/Google\ Chrome.app --args --user-data-dir='/tmp/chrome_dev_session' --disable-web-security"
 
-alias php='nocorrect php'
+dlbook="audiobook-dl --username=st202311@daronspence.com --password=$(op read 'op://Shared/Storytel 2023-11/password')"
+
+# alias php='nocorrect php'
 alias npm='nocorrect npm'
 alias yarn='nocorrect yarn'
 
