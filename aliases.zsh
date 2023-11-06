@@ -10,8 +10,6 @@ alias c="clear"
 alias zbundle="antibody bundle < $DOTFILES/zsh_plugins.txt > $DOTFILES/zsh_plugins.sh"
 alias chrome="open -n -a /Applications/Google\ Chrome.app --args --user-data-dir='/tmp/chrome_dev_session' --disable-web-security"
 
-alias dlbook="audiobook-dl --username=st202311@daronspence.com --password=$(op read 'op://Shared/Storytel 2023-11/password')"
-
 # alias php='nocorrect php'
 alias npm='nocorrect npm'
 alias yarn='nocorrect yarn'
@@ -76,4 +74,8 @@ function tab () {
     echo "New tab package not found. Installing from npm."
     npm install ttab -g
     echo "Package installed.\nPlease restart your terminal and re-run the command."
+}
+
+function dlbook () {
+    audiobook-dl --username=st202311@daronspence.com --password=$(op read 'op://Shared/Storytel 2023-11/password') $args
 }
