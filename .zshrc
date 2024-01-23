@@ -8,7 +8,6 @@ export DOTFILES=$HOME/.dotfiles
 export ZSH=$HOME/.oh-my-zsh
 
 # Enable completions
-autoload -Uz compinit && compinit
 autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
@@ -139,7 +138,3 @@ autoload -U add-zsh-hook
 
 fpath=(~/.stripe $fpath)
 autoload -Uz compinit && compinit -i
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -13,7 +13,7 @@ brew 'coreutils' # Those that come with macOS are outdated
 brew 'ctop'
 brew 'ffmpeg'
 brew 'fswatch'
-# brew 'gh'
+brew 'gh'
 brew 'git'
 brew 'lazygit'
 brew 'gnupg2'
