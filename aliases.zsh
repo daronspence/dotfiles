@@ -79,3 +79,9 @@ function tab () {
 function dlbook () {
     audiobook-dl --username=st202311@daronspence.com --password=$(op read 'op://Shared/Storytel 2023-11/password') $args
 }
+
+function what() {
+    lsof -Pni:${1}
+}
+
+alias waht=what
