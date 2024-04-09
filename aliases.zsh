@@ -53,14 +53,7 @@ alias gl="git log --oneline --decorate --color"
 alias nuke="git clean -df && git reset --hard"
 alias unstage="git restore --staged ."
 alias pushup="git push -u origin HEAD"
-
-# Work stuff
-alias cmdisablexdebug="docker exec -it cm-web-php /bin/bash -c 'mv /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini.disabled && ls -l /usr/local/etc/php/conf.d' && sleep 1 && cmrphp"
-alias cmenablexdebug="docker exec -it cm-web-php /bin/bash -c 'mv /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini.disabled /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini' && sleep 1 && cmrphp"
-alias cmphpinilist="docker exec -it cm-web-php /bin/bash -c 'ls -l /usr/local/etc/php/conf.d'"
-
-alias cmpd="docker exec -it cm-partner-dashboard-php"
-
+alias claer="clear"
 alias coverage="export XDEBUG_MODE=coverage && vendor/bin/phpunit --coverage-html reports/"
 
 function tab () {
