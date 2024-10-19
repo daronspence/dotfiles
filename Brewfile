@@ -20,7 +20,7 @@ brew 'grep'
 brew 'htop'
 brew 'httpie'
 brew 'hub'
-brew 'mackup'
+# brew 'mackup' # Borked after Oct 2024. Redemption arc?
 brew 'mas' # Mac App Store manager
 brew 'mkcert'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
@@ -43,11 +43,7 @@ brew 'pyenv'
 brew 'composer'
 brew 'imagemagick'
 brew 'jq'
-brew 'mysql'
-brew 'nginx'
-brew 'node'
 brew 'pv'
-brew 'redis'
 brew 'svn'
 brew 'yarn'
 brew 'php-code-sniffer'
@@ -59,7 +55,6 @@ cask '1password-cli'
 cask 'aerial'
 cask 'airflow'
 cask 'alfred'
-cask 'camo-studio'
 cask 'cleanshot'
 cask 'dbngin'
 cask 'discord'
@@ -87,10 +82,8 @@ cask 'qlmarkdown'
 cask 'ray'
 # cask 'reaper'
 cask 'rectangle'
-cask 'rocket'
 cask 'shureplus-motiv'
 cask 'sip'
-cask 'sonos'
 cask 'soundsource'
 cask 'steam'
 cask 'sublime-text'
@@ -111,9 +104,7 @@ cask 'font-source-code-pro'
 cask 'font-source-serif-pro'
 
 # Mac App Store
-mas 'Battery Indicator', id: 1206020918
 mas 'Dato', id: 1470584107
-# mas 'Jira', id: 1475897096
 mas 'Numbers', id: 409203825
 mas 'Mainstage 3', id: 634159523
 mas 'Pages', id: 409201541

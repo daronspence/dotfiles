@@ -35,7 +35,7 @@ If you did all of the above you may now follow these install instructions to set
 6. Clone this repo to `~/.dotfiles`
 7. Install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh#getting-started)
 8. Run `install.sh` to start the installation
-9. After mackup is synced with your cloud storage, restore preferences by running `mackup restore`
+9. After mackup is synced with your cloud storage, restore preferences by running ~~`mackup restore`~~ **WARNING: Do not run this on macOS 14+** *(Sonoma)*
 10. Restart your computer to finalize the process
 
 Your Mac is now ready to use!
@@ -57,8 +57,9 @@ Check out the [`aliases.zsh`](./aliases.zsh) file and add your own aliases. If y
 When installing these dotfiles for the first time you'll need to backup all of your settings with Mackup. Install Mackup and backup your settings with the commands below. Your settings will be synced to iCloud so you can use them to sync between computers and reinstall them when reinstalling your Mac. If you want to save your settings to a different directory or different storage than iCloud, [checkout the documentation](https://github.com/lra/mackup/blob/master/doc/README.md#storage). Also make sure your `.zshrc` file is symlinked from your dotfiles repo to your home directory.
 
 ```zsh
-brew install mackup
-mackup backup
+// JK! Dont work no more :(
+// brew install mackup
+// mackup backup
 ```
 
 You can tweak the shell theme, the Oh My Zsh settings and much more. Go through the files in this repo and tweak everything to your liking.

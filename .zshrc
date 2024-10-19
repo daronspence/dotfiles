@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/Users/daron/.zsh/completions:"* ]]; then export FPATH="/Users/daron/.zsh/completions:$FPATH"; fi
 # Path to your dotfiles.
 export DOTFILES=$HOME/.dotfiles
 
@@ -159,3 +161,4 @@ export HERD_PHP_82_INI_SCAN_DIR="/Users/daron/Library/Application Support/Herd/c
 
 # Created by `pipx` on 2024-05-14 10:59:16
 export PATH="$PATH:/Users/daron/.local/bin"
+. "/Users/daron/.deno/env"
