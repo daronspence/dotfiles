@@ -4,6 +4,7 @@ tap 'homebrew/bundle'
 # Binaries
 # brew 'awscli'
 brew 'bash' # Latest Bash version
+brew 'jandedobbeleer/oh-my-posh/oh-my-posh'
 brew 'bat' # "cat" on steroids
 brew 'cloc'
 brew 'coreutils' # Those that come with macOS are outdated
@@ -65,6 +66,7 @@ cask 'farrago'
 cask 'figma'
 cask 'firefox'
 cask 'freac'
+cask 'ghostty'
 cask 'github'
 cask 'google-chrome'
 cask 'grandperspective'
@@ -91,6 +93,7 @@ cask 'obsidian'
 cask 'onyx'
 cask 'qlmarkdown'
 cask 'ray'
+cask 'raycast'
 # cask 'reaper'
 # cask 'rectangle'
 cask 'shureplus-motiv'
@@ -99,7 +102,6 @@ cask 'slack'
 cask 'soundsource'
 cask 'steam'
 cask 'sublime-text'
-cask 'submline-merge'
 cask 'tableplus'
 cask 'telegram'
 cask 'the-unarchiver'
@@ -115,9 +117,7 @@ cask 'zed'
 # Fonts
 cask 'font-inter'
 cask 'font-roboto'
-cask 'font-source-code-pro-for-powerline'
 cask 'font-source-code-pro'
-cask 'font-source-serif-pro'
 
 # Mac App Store
 mas '1Password for Safari', id: 1569813296

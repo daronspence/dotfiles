@@ -2,3 +2,4 @@ Brewfile.lock.json
 plugins/*
 !.gitkeep
 machine-aliases.zsh
+.DS_Store

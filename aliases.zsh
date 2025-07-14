@@ -20,6 +20,12 @@ alias library="cd $HOME/Library"
 alias sites="cd $HOME/Sites"
 alias cake="cd $HOME/Sites/eat-cake"
 
+# List directory contents
+alias lsa='ls -lah'
+alias l='ls -lah'
+alias ll='ls -lh'
+alias la='ls -lAh'
+
 # Laravel
 alias a="nocorrect php artisan"
 alias ams="php artisan migrate:fresh --seed"
@@ -55,6 +61,7 @@ alias unstage="git restore --staged ."
 alias pushup="git push -u origin HEAD"
 alias claer="clear"
 alias coverage="export XDEBUG_MODE=coverage && vendor/bin/phpunit --coverage-html reports/"
+alias lg="lazygit"
 
 function tab () {
     FOUND=$(which ttab)
