@@ -11,6 +11,8 @@ brew 'coreutils' # Those that come with macOS are outdated
 brew 'ctop'
 brew 'ffmpeg'
 brew 'fswatch'
+brew 'fzf'
+brew 'fnm'
 brew 'gh'
 brew 'git'
 brew 'lazygit'
@@ -24,6 +26,7 @@ brew 'mas' # Mac App Store manager
 brew 'mkcert'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 # brew 'stripe/stripe-cli/stripe'
+brew 'ripgrep'
 brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure
 brew 'zlib' # Needed for Memcached
@@ -60,7 +63,8 @@ cask 'arc'
 cask 'cleanshot'
 cask 'dbngin'
 cask 'discord'
-cask 'docker'
+# Install Docker from official repo instead
+# cask 'docker'
 cask 'easy-move-plus-resize'
 cask 'farrago'
 cask 'figma'

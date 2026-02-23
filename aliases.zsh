@@ -85,3 +85,4 @@ function what() {
 }
 
 alias waht=what
+alias killnginx="sudo pkill -f \"nginx-arm\""

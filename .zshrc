@@ -1,3 +1,22 @@
+# Profiling Start
+# zmodload zsh/zprof
+
+HISTFILE=~/.local/share/zsh/history
+SAVEHIST=100000 # Max entries saved to file.
+HISTSIZE=100000 # Max entires for in-memory history.
+
+setopt hist_ignore_dups  # Collapse two consecutive idential commands.
+setopt hist_find_no_dups  # Ignore duplicates when searching history.
+setopt share_history  # Share across concurrent sessions (append immediately, read from files, add timestamps).
+setopt hist_ignore_space  # Lines that begin with space are not recorded.
+setopt hist_verify  # Don't auto-execute selected history entry.
+setopt hist_ignore_all_dups  # If a history entry would be duplicate, delete older copies.
+
+setopt COMBINING_CHARS # Combine multi-codepoint characters into one.
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # Add deno completions to search path
 if [[ ":$FPATH:" != *":/Users/daron/.zsh/completions:"* ]]; then export FPATH="/Users/daron/.zsh/completions:$FPATH"; fi
 # Path to your dotfiles.
@@ -8,13 +27,6 @@ export DOTFILES=$HOME/.dotfiles
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-
-# Enable completions
-autoload -U history-search-end
-zle -N history-beginning-search-backward-end history-search-end
-zle -N history-beginning-search-forward-end history-search-end
-bindkey "^[[A" history-beginning-search-backward-end
-bindkey "^[[B" history-beginning-search-forward-end
 
 # Minimal - Theme Settings
 export MNML_INSERT_CHAR="$"
@@ -128,46 +140,12 @@ export LANG=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 autoload -U add-zsh-hook
-# load-nvmrc() {
-#   local node_version="$(nvm version)"
-#   local nvmrc_path="$(nvm_find_nvmrc)"
 
-#   if [ -n "$nvmrc_path" ]; then
-#     local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-#     if [ "$nvmrc_node_version" = "N/A" ]; then
-#       nvm install
-#     elif [ "$nvmrc_node_version" != "$node_version" ]; then
-#       nvm use
-#     fi
-#   elif [ "$node_version" != "$(nvm version default)" ]; then
-#     echo "Reverting to nvm default version"
-#     nvm use default
-#   fi
-# }
-# add-zsh-hook chpwd load-nvmrc
-# load-nvmrc
-
-fpath=(~/.stripe $fpath)
-autoload -Uz compinit && compinit -i
-
-
-# Herd injected PHP 8.3 configuration.
-export HERD_PHP_83_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/83/"
-
-
-# Herd injected NVM configuration
-export NVM_DIR="$HOME/Library/Application Support/Herd/config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-[[ -f "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh" ]] && builtin source "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh"
+# Must have `fnm` installed
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 # Herd injected PHP binary.
 export PATH="$HOME/Library/Application Support/Herd/bin/":$PATH
-
-
-# Herd injected PHP 8.2 configuration.
-export HERD_PHP_82_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/82/"
 
 # Created by `pipx` on 2024-05-14 10:59:16
 export PATH="$PATH:$HOME/.local/bin"
@@ -177,14 +155,11 @@ export PATH="$PATH:$HOME/.local/bin"
 # Herd injected PHP 8.3 configuration.
 export HERD_PHP_83_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/83/"
 
-
-# Herd injected PHP 8.3 configuration.
-export HERD_PHP_83_INI_SCAN_DIR="/Users/daronspence/Library/Application Support/Herd/config/php/83/"
-
-
 # Herd injected PHP 8.4 configuration.
 export HERD_PHP_84_INI_SCAN_DIR="/Users/daronspence/Library/Application Support/Herd/config/php/84/"
 
-
 # Herd injected PHP 8.2 configuration.
 export HERD_PHP_82_INI_SCAN_DIR="/Users/daronspence/Library/Application Support/Herd/config/php/82/"
+
+# Profiling End
+# zprof
