@@ -1,143 +1,204 @@
-# Taps
-tap 'homebrew/bundle'
-
-# Binaries
-# brew 'awscli'
-brew 'bash' # Latest Bash version
-brew 'jandedobbeleer/oh-my-posh/oh-my-posh'
-brew 'bat' # "cat" on steroids
-brew 'cloc'
-brew 'coreutils' # Those that come with macOS are outdated
-brew 'ctop'
-brew 'ffmpeg'
-brew 'fswatch'
-brew 'fzf'
-brew 'fnm'
-brew 'gh'
-brew 'git'
-brew 'lazygit'
-brew 'gnupg'
-brew 'grep'
-brew 'htop'
-brew 'httpie'
-brew 'hub'
-# brew 'mackup' # Borked after Oct 2024. Redemption arc?
-brew 'mas' # Mac App Store manager
-brew 'mkcert'
-brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
-# brew 'stripe/stripe-cli/stripe'
-brew 'ripgrep'
-brew 'trash' # Manage the Trash bin
-brew 'tree' # List directories in a tree structure
-brew 'zlib' # Needed for Memcached
-
-# Spatie Medialibrary
-brew 'jpegoptim'
-brew 'optipng'
-brew 'pngquant'
-brew 'svgo'
-brew 'gifsicle'
-
-# Development
-brew 'elixir'
-brew 'phive'
-brew 'pyenv'
-brew 'composer'
-brew 'imagemagick'
-brew 'jq'
-brew 'pv'
-brew 'svn'
-brew 'yarn'
-brew 'php-code-sniffer'
-brew 'php-cs-fixer'
-
-# Apps
-cask '1password'
-cask '1password-cli'
-# AWS VPN w/ work config
-cask 'aerial'
-cask 'airflow'
-cask 'apidog'
-cask 'alfred'
-cask 'arc'
-cask 'cleanshot'
-cask 'dbngin'
-cask 'discord'
-# Install Docker from official repo instead
-# cask 'docker'
-cask 'easy-move-plus-resize'
-cask 'farrago'
-cask 'figma'
-cask 'firefox'
-cask 'freac'
-cask 'ghostty'
-cask 'github'
-cask 'google-chrome'
-cask 'grandperspective'
-cask 'handbrake'
-cask 'hiddenbar'
-cask 'herd'
-cask 'hey'
-# Audient iD software (audio interface)
-cask 'iina'
-cask 'imageoptim'
-cask 'inkscape'
-cask 'insomnia'
-cask 'iterm2'
-cask 'karabiner-elements'
-# cask 'kitty'
-cask 'latest'
-cask 'loop'
-cask 'loopback'
-cask 'losslesscut'
-cask 'native-access'
-cask 'nova'
-cask 'obs'
-cask 'obsidian'
-cask 'onyx'
-cask 'qlmarkdown'
-cask 'ray'
-cask 'raycast'
-# cask 'reaper'
-# cask 'rectangle'
-cask 'shureplus-motiv'
-cask 'sip'
-cask 'slack'
-cask 'soundsource'
-cask 'steam'
-cask 'sublime-text'
-cask 'tableplus'
-cask 'telegram'
-cask 'the-unarchiver'
-cask 'tinkerwell'
-cask 'transmit'
-cask 'transmission'
-cask 'tuple'
-cask 'visual-studio-code'
-cask 'vlc'
-cask 'xld'
-cask 'zed'
-
-# Fonts
-cask 'font-inter'
-cask 'font-roboto'
-cask 'font-source-code-pro'
-
-# Mac App Store
-mas '1Password for Safari', id: 1569813296
-mas 'Actions', id: 1586435171
-mas 'Audiobook Binder', id: 413969927
-mas 'Boop', id: 1518425043
-mas 'Dato', id: 1470584107
-mas 'GarageBand', id: 682658836
-mas 'Infuse', id: 1136220934
-mas 'Keynote', id: 409183694
-mas 'JSONPeep', id: 1458969831
-mas 'Lungo', id: 1263070803
-mas 'Mainstage 3', id: 634159523
-mas 'Noir', id: 1592917505
-mas 'Numbers', id: 409203825
-mas 'Pages', id: 409201541
-mas 'Speediness', id: 1596706466
-mas 'Shortery', id: 1594183810
-mas 'WhatsApp', id: 310633997
+tap "homebrew/bundle"
+tap "homebrew/services"
+tap "jandedobbeleer/oh-my-posh"
+tap "pkgxdev/made"
+tap "tweakphp/tap"
+brew "autoconf"
+brew "bash"
+brew "bat"
+brew "cbonsai"
+brew "cloc"
+brew "cloudflared"
+brew "composer"
+brew "coreutils"
+brew "ctop"
+brew "dos2unix"
+brew "elixir"
+brew "fastfetch"
+brew "ffmpeg"
+brew "fnm"
+brew "fswatch"
+brew "fzf"
+brew "gh"
+brew "gifsicle"
+brew "git"
+brew "gnu-sed"
+brew "gnupg"
+brew "go"
+brew "grep"
+brew "htop"
+brew "httpie"
+brew "hub"
+brew "imagemagick"
+brew "jpegoptim"
+brew "jq"
+brew "jrnl"
+brew "lazygit"
+brew "mago"
+brew "mas"
+brew "mkcert"
+brew "nmap"
+brew "oha"
+brew "optipng"
+brew "phive"
+brew "php-code-sniffer"
+brew "php-cs-fixer"
+brew "pie"
+brew "pipx"
+brew "pkgconf"
+brew "pngquant"
+brew "pv"
+brew "pyenv"
+brew "ripgrep"
+brew "screen"
+brew "sfk"
+brew "subversion"
+brew "svgo"
+brew "trash"
+brew "tree"
+brew "yarn"
+brew "yt-dlp"
+brew "zlib"
+brew "zoxide"
+brew "zrok"
+brew "zsh-autocomplete"
+brew "zsh-autosuggestions"
+brew "jandedobbeleer/oh-my-posh/oh-my-posh"
+brew "pkgxdev/made/mash"
+cask "1password"
+cask "1password-cli"
+cask "aerial"
+cask "airflow"
+cask "alfred"
+cask "apidog"
+cask "cleanshot"
+cask "cursor-cli"
+cask "dbngin"
+cask "discord"
+cask "dockdoor"
+cask "docker-desktop"
+cask "easy-move+resize"
+cask "farrago"
+cask "figma"
+cask "firefox"
+cask "font-inter"
+cask "font-roboto"
+cask "font-source-code-pro"
+cask "font-source-code-pro-for-powerline"
+cask "freac"
+cask "ghostty"
+cask "github"
+cask "google-chrome"
+cask "grandperspective"
+cask "handbrake-app"
+cask "herd"
+cask "hey-desktop"
+cask "hiddenbar"
+cask "iina"
+cask "imageoptim"
+cask "inkscape"
+cask "karabiner-elements"
+cask "latest"
+cask "loop"
+cask "loopback"
+cask "losslesscut"
+cask "native-access"
+cask "ngrok"
+cask "nova"
+cask "obs"
+cask "obsidian"
+cask "onyx"
+cask "qlmarkdown"
+cask "ray"
+cask "raycast"
+cask "shureplus-motiv"
+cask "slack"
+cask "soundsource"
+cask "steam"
+cask "sublime-text"
+cask "tableplus"
+cask "telegram"
+cask "the-unarchiver"
+cask "tinkerwell"
+cask "transmission"
+cask "transmit"
+cask "tuple"
+cask "tweakphp/tap/tweakphp"
+cask "visual-studio-code"
+cask "vlc"
+cask "xld"
+cask "zed"
+mas "1Password for Safari", id: 1569813296
+mas "Actions", id: 1586435171
+mas "AdBlock", id: 1402042596
+mas "Boop", id: 1518425043
+mas "Dato", id: 1470584107
+mas "Dropover", id: 1355679052
+mas "GarageBand", id: 682658836
+mas "Gifski", id: 1351639930
+mas "iMovie", id: 408981434
+mas "Infuse", id: 1136220934
+mas "JSON Peep", id: 1458969831
+mas "Keynote", id: 409183694
+mas "Lungo", id: 1263070803
+mas "MainStage", id: 634159523
+mas "Noir", id: 1592917505
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Shortery", id: 1594183810
+mas "Speediness", id: 1596706466
+mas "Usage", id: 1561788435
+mas "Xcode", id: 497799835
+vscode "1000ch.svgo"
+vscode "adpyke.codesnap"
+vscode "adrianwilczynski.alpine-js-intellisense"
+vscode "ambar.bundle-size"
+vscode "asvetliakov.vscode-neovim"
+vscode "be5invis.vscode-custom-css"
+vscode "bmewburn.vscode-intelephense-client"
+vscode "bradlc.vscode-tailwindcss"
+vscode "calebporzio.better-phpunit"
+vscode "davidanson.vscode-markdownlint"
+vscode "devsense.composer-php-vscode"
+vscode "dotenv.dotenv-vscode"
+vscode "editorconfig.editorconfig"
+vscode "emeraldwalk.runonsave"
+vscode "enkia.tokyo-night"
+vscode "formulahendry.auto-rename-tag"
+vscode "ganyicz.livewire-sfc-support"
+vscode "github.vscode-github-actions"
+vscode "jaguadoromero.vscode-php-create-class"
+vscode "jakebecker.elixir-ls"
+vscode "laravel.vscode-laravel"
+vscode "liamhammett.inline-parameters"
+vscode "mechatroner.rainbow-csv"
+vscode "mehedidracula.php-namespace-resolver"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode.makefile-tools"
+vscode "neilbrayfield.php-docblocker"
+vscode "oderwat.indent-rainbow"
+vscode "oxc.oxc-vscode"
+vscode "patbenatar.advanced-new-file"
+vscode "phoenixframework.phoenix"
+vscode "redhat.vscode-yaml"
+vscode "reesew.everforest-theme"
+vscode "sharat.vscode-brewfile"
+vscode "shd101wyy.markdown-preview-enhanced"
+vscode "shufo.vscode-blade-formatter"
+vscode "simonsiefke.svg-preview"
+vscode "sperovita.alpinejs-syntax-highlight"
+vscode "stillat-llc.vscode-antlers"
+vscode "supermaven.supermaven"
+vscode "tamasfe.even-better-toml"
+vscode "tompollak.lazygit-vscode"
+vscode "ttoowa.in-your-face-incredible"
+vscode "usernamehw.errorlens"
+vscode "vitest.explorer"
+vscode "voidzero.vite-plus-extension-pack"
+vscode "vs-publisher-1448185.keyoti-changeallendoflinesequence"
+vscode "vscode-icons-team.vscode-icons"
+vscode "vue.volar"
+vscode "waderyan.gitblame"
+vscode "xdebug.php-debug"
+npm "@openai/codex"
+npm "corepack"

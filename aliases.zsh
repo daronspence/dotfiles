@@ -63,6 +63,11 @@ alias claer="clear"
 alias coverage="export XDEBUG_MODE=coverage && vendor/bin/phpunit --coverage-html reports/"
 alias lg="lazygit"
 
+# If __zoxide_z exists, alias as cd as z
+if command -v zoxide >/dev/null 2>&1; then
+    alias cd='z'
+fi
+
 function tab () {
     FOUND=$(which ttab)
     args="$@"

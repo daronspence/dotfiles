@@ -17,10 +17,21 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+autoload -Uz compinit
+compinit
+
+# 1password
+eval "$(op completion zsh)"; compdef _op op
+
+# zoxide
+export _ZO_ECHO=1
+eval "$(zoxide init zsh)"
+
 # Add deno completions to search path
 if [[ ":$FPATH:" != *":/Users/daron/.zsh/completions:"* ]]; then export FPATH="/Users/daron/.zsh/completions:$FPATH"; fi
 # Path to your dotfiles.
 export DOTFILES=$HOME/.dotfiles
+export HOMEBREW_BUNDLE_FILE=$DOTFILES/Brewfile
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -37,7 +48,7 @@ export MNML_RPROMPT=('mnml_cwd 20')
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="passion"
+# ZSH_THEME="passion"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -151,15 +162,17 @@ export PATH="$HOME/Library/Application Support/Herd/bin/":$PATH
 export PATH="$PATH:$HOME/.local/bin"
 . "$HOME/.deno/env"
 
-
 # Herd injected PHP 8.3 configuration.
-export HERD_PHP_83_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/83/"
+export HERD_PHP_83_INI_SCAN_DIR="/Users/daronspence/Library/Application Support/Herd/config/php/83/"
 
 # Herd injected PHP 8.4 configuration.
 export HERD_PHP_84_INI_SCAN_DIR="/Users/daronspence/Library/Application Support/Herd/config/php/84/"
 
 # Herd injected PHP 8.2 configuration.
 export HERD_PHP_82_INI_SCAN_DIR="/Users/daronspence/Library/Application Support/Herd/config/php/82/"
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"
 
 # Profiling End
 # zprof
