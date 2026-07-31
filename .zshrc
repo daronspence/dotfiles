@@ -119,7 +119,7 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
     # eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/montys.omp.json)"
     eval "$(oh-my-posh init zsh --config $DOTFILES/theme.omp.json)"
     source $DOTFILES/aliases.zsh
-    source $DOTFILES/machine-aliases.zsh
+    [ -s "$DOTFILES/machine-aliases.zsh" ] && \. $DOTFILES/machine-aliases.zsh
 fi
 
 # User configuration
@@ -160,7 +160,7 @@ export PATH="$HOME/Library/Application Support/Herd/bin/":$PATH
 
 # Created by `pipx` on 2024-05-14 10:59:16
 export PATH="$PATH:$HOME/.local/bin"
-. "$HOME/.deno/env"
+# . "$HOME/.deno/env"
 
 # Herd injected PHP 8.3 configuration.
 export HERD_PHP_83_INI_SCAN_DIR="/Users/daronspence/Library/Application Support/Herd/config/php/83/"
@@ -172,7 +172,11 @@ export HERD_PHP_84_INI_SCAN_DIR="/Users/daronspence/Library/Application Support/
 export HERD_PHP_82_INI_SCAN_DIR="/Users/daronspence/Library/Application Support/Herd/config/php/82/"
 
 # Vite+ bin (https://viteplus.dev)
-. "$HOME/.vite-plus/env"
+[ -s "$HOME/.vite-plus/env" ] && \. "$HOME/.vite-plus/env"
 
 # Profiling End
 # zprof
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
