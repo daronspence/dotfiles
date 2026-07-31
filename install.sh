@@ -32,12 +32,6 @@ ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 # Add custom plugins for use with ZSH.
 git clone https://github.com/jasonmccreary/git-trim.git $ZSH_CUSTOM/plugins/git-trim
 
-# Symlink the Mackup config file to the home directory
-ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
-
-# Install Deno
-curl -fsSL https://deno.land/install.sh | sh
-
 # Install NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 
