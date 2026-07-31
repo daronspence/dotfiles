@@ -19,7 +19,7 @@ brew update
 
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
-brew bundle
+brew bundle install -v
 
 # Create a Sites directory
 # This is a default directory for macOS user accounts but doesn't comes pre-installed
