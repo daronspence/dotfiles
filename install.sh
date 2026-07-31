@@ -6,6 +6,9 @@ git config --global diff.colorMoved zebra
 git config --global pull.rebase true
 git config --global rebase.autoStash true
 
+echo "Installing Oh My Zsh..."
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -18,12 +21,10 @@ brew update
 brew tap homebrew/bundle
 brew bundle
 
-# Install global Composer packages
-/usr/local/bin/composer global require squizlabs/php_codesniffer laravel/forge-cli
-
 # Create a Sites directory
 # This is a default directory for macOS user accounts but doesn't comes pre-installed
 mkdir $HOME/Sites
+mkdir $HOME/Work
 
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
