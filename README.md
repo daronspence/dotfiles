@@ -30,7 +30,7 @@ If you did all of the above you may now follow these install instructions to set
 3. Install macOS Command Line Tools by running `xcode-select --install`
 4. Copy your public and private SSH keys to `~/.ssh` and make sure they're set to `600`
 5. Clone this repo to `~/.dotfiles`
-6. Run `install.sh` to start the installation, then run it again because the first command to install Oh My Zsh will reload the shell 😜
+6. Run `install.sh` to start the installation.
 7. Restart your computer to finalize the process
 
 Your Mac is now ready to use!

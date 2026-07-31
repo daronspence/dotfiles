@@ -7,7 +7,7 @@ git config --global pull.rebase true
 git config --global rebase.autoStash true
 
 echo "Installing Oh My Zsh..."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
