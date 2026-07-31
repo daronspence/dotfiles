@@ -35,15 +35,6 @@ alias cfresh="rm -rf vendor/ composer.lock && composer i"
 
 # JS
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
-alias watch="npm run watch"
-
-# Docker
-alias docker-composer="docker-compose"
-#alias dstop="docker stop $(docker ps -a -q)"
-#alias dpurgecontainers="dstop && docker rm $(docker ps -a -q)"
-#alias dpurgeimages="docker rmi $(docker images -q)"
-#dbuild() { docker build -t=$1 .; }
-#dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }
 
 # Git
 alias commit="git add . && git commit -m"
@@ -68,17 +59,35 @@ if command -v zoxide >/dev/null 2>&1; then
     alias cd='z'
 fi
 
-function tab () {
-    FOUND=$(which ttab)
-    args="$@"
-    if [[ ${FOUND} != *"not found"* ]];then
-        ttab $args
-        return
-    fi
+tab() {
+  if (( $# == 0 )); then
+    print -u2 'usage: tab <command> [arguments...]'
+    return 2
+  fi
 
-    echo "New tab package not found. Installing from npm."
-    npm install ttab -g
-    echo "Package installed.\nPlease restart your terminal and re-run the command."
+  local command_text
+  printf -v command_text '%q ' "$@"
+
+  osascript - "$PWD" "$command_text" <<'APPLESCRIPT'
+on run argv
+  set workingDirectory to item 1 of argv
+  set commandText to item 2 of argv
+
+  tell application "Ghostty"
+    activate
+
+    set cfg to new surface configuration
+    set initial working directory of cfg to workingDirectory
+    set initial input of cfg to commandText & "\n"
+
+    if (count of windows) = 0 then
+      new window with configuration cfg
+    else
+      new tab in front window with configuration cfg
+    end if
+  end tell
+end run
+APPLESCRIPT
 }
 
 function dlbook () {
