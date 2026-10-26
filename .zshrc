@@ -187,3 +187,5 @@ export NVM_DIR="$HOME/.nvm"
 # Lerd completions
 fpath=(/Users/daronspence/.local/share/zsh/site-functions $fpath)
 autoload -Uz compinit && compinit
+
+if command -v fastfetch >/dev/null 2>&1; then fastfetch; fi

@@ -1,0 +1,6 @@
+os:
+  editPreset: vscode
+
+git:
+  pull:
+    mode: rebase

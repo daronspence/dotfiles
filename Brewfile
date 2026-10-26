@@ -133,8 +133,6 @@ brew "zsh-autosuggestions"
 cask "1password"
 # Command-line interface for 1Password
 cask "1password-cli"
-# Apple TV Aerial screensaver
-cask "aerial"
 # Watch local content on Apple TV and Chromecast
 cask "airflow"
 # Application launcher and productivity software
