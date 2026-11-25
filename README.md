@@ -35,6 +35,22 @@ If you did all of the above you may now follow these install instructions to set
 
 Your Mac is now ready to use!
 
+## Sharing Between Macs
+
+The shared shell configuration supports Apple Silicon (`/opt/homebrew`) and Intel (`/usr/local`), uses `$HOME` for user paths, and loads `path.zsh` before prompt setup. Both Macs use fnm; the old NVM initialization is no longer needed.
+
+Keep credentials and host-specific aliases in the ignored `machine-aliases.zsh`; do not copy that file between machines. Leave local backups and installed plugins on their original machine.
+
+### Rex Command Replay
+
+`.zshrc` sources `rex/replay.zsh` directly from this checkout; no separate `~/.config/rex` installation is needed. Open a new Rex pane to activate it.
+
+After a Rex server restart, an interrupted command restarts **from the beginning**, in its original directory, with its original shell text. This is not process resume: commands with side effects may run twice. Completed commands and non-Rex shells are unaffected.
+
+Pending commands (including their arguments) are stored privately under `${XDG_STATE_HOME:-$HOME/.local/state}/rex-replay` with mode `0600`, and cleared when the prompt returns or replay is interrupted.
+
+Run `python3 ~/.dotfiles/rex/test_replay.py --shell` to test the actual shell configuration, quoting, working directory, two isolated server restarts, idle panes, and Ctrl-C cleanup. The test starts its own Rex server and does not restart live sessions.
+
 ## Your Own Dotfiles
 
 If you want to start with your own dotfiles from this setup, it's pretty easy to do so. First of all you'll need to fork this repo. After that you can tweak it the way you want.

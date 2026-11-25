@@ -1,5 +1,3 @@
-source $DOTFILES/path.zsh
-
 # Shortcuts
 alias vim=nvim
 alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"

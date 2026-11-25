@@ -1,6 +1,11 @@
 # Profiling Start
 # zmodload zsh/zprof
 
+# User-installed commands and Homebrew must be available before prompt initialization.
+export PATH="$PATH:$HOME/.local/bin"
+export DOTFILES="$HOME/.dotfiles"
+source "$DOTFILES/path.zsh"
+
 HISTFILE=~/.local/share/zsh/history
 SAVEHIST=100000 # Max entries saved to file.
 HISTSIZE=100000 # Max entires for in-memory history.
@@ -15,7 +20,11 @@ setopt hist_ignore_all_dups  # If a history entry would be duplicate, delete old
 setopt COMBINING_CHARS # Combine multi-codepoint characters into one.
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+
+# Add completion paths before initializing completions.
+if [[ ":$FPATH:" != *":$HOME/.zsh/completions:"* ]]; then export FPATH="$HOME/.zsh/completions:$FPATH"; fi
+fpath=("$HOME/.local/share/zsh/site-functions" $fpath)
 
 autoload -Uz compinit
 compinit
@@ -27,10 +36,6 @@ eval "$(op completion zsh)"; compdef _op op
 export _ZO_ECHO=1
 eval "$(zoxide init zsh)"
 
-# Add deno completions to search path
-if [[ ":$FPATH:" != *":/Users/daron/.zsh/completions:"* ]]; then export FPATH="/Users/daron/.zsh/completions:$FPATH"; fi
-# Path to your dotfiles.
-export DOTFILES=$HOME/.dotfiles
 export HOMEBREW_BUNDLE_FILE=$DOTFILES/Brewfile
 
 # If you come from bash you might have to change your $PATH.
@@ -158,34 +163,31 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 # Herd injected PHP binary.
 export PATH="$HOME/Library/Application Support/Herd/bin/":$PATH
 
-# Created by `pipx` on 2024-05-14 10:59:16
-export PATH="$PATH:$HOME/.local/bin"
 # . "$HOME/.deno/env"
 
 # Herd injected PHP 8.3 configuration.
-export HERD_PHP_83_INI_SCAN_DIR="/Users/daronspence/Library/Application Support/Herd/config/php/83/"
+export HERD_PHP_83_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/83/"
 
 # Herd injected PHP 8.4 configuration.
-export HERD_PHP_84_INI_SCAN_DIR="/Users/daronspence/Library/Application Support/Herd/config/php/84/"
+export HERD_PHP_84_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/84/"
 
 # Herd injected PHP 8.2 configuration.
-export HERD_PHP_82_INI_SCAN_DIR="/Users/daronspence/Library/Application Support/Herd/config/php/82/"
-
-# Vite+ bin (https://viteplus.dev)
-[ -s "$HOME/.vite-plus/env" ] && \. "$HOME/.vite-plus/env"
+export HERD_PHP_82_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/82/"
 
 # Profiling End
 # zprof
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # Lerd
 # export PATH="/Users/daronspence/.local/share/lerd/bin:$PATH"
 
-# Lerd completions
-fpath=(/Users/daronspence/.local/share/zsh/site-functions $fpath)
-autoload -Uz compinit && compinit
-
 if command -v fastfetch >/dev/null 2>&1; then fastfetch; fi
+
+# Vite+ bin (https://viteplus.dev)
+if [[ -s "$HOME/.config/vite-plus/env" ]]; then
+    source "$HOME/.config/vite-plus/env"
+elif [[ -s "$HOME/.vite-plus/env" ]]; then
+    source "$HOME/.vite-plus/env"
+fi
+
+# Replay commands interrupted by a Rex server restart (Rex panes only).
+source "$DOTFILES/rex/replay.zsh"
